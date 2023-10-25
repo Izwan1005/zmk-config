@@ -10,6 +10,22 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+//raw
+    macros {
+        norsk_AO: norsk_AO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LEFT_ALT>,
+                <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp KP_NUMBER_9>,
+                <&macro_release &kp LEFT_ALT>;
+
+            label = "NORSK_AO";
+        };
+        
+    };
+//raw
+
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
